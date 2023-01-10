@@ -74,8 +74,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         # options = QFileDialog.DontUseNativeDialog
         # salvar, _ = QFileDialog.getSaveFileName(self, 'Salvar', 'D:\\Git\\Nova pasta\\URL\\evidencia', 'Imagem (*.jpg);; PNG File (*.png)', options=options)
 
+        banco_db = '2'
         imagem = ImageQt.fromqpixmap(self.label.pixmap())
-        imagem.save('Evidencia/salvando.png')
+        imagem.save(f'Evidencia/{banco_db }.png')
         # img, _ = QFileDialog.getSaveFileName(self, "Salvar Arquivo",
         #                                      filter="PNG(*.png);; JPEG(*.jpg)")
         # file_filter = 'Images (*.jpg; *.png)'
