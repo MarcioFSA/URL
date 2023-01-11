@@ -20,7 +20,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.pushButton.setGeometry(QtCore.QRect(260, 350, 311, 71))
         self.pushButton.setObjectName("pushButton")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(190, 20, 461, 241))
+        self.label.setGeometry(QtCore.QRect(190, 20, 500, 250))
+        # self.label.setGeometry(QtCore.QRect(190, 20, 461, 241))
         self.label.setStyleSheet("")
         self.label.setText("")
         self.label.setObjectName("label")
@@ -57,53 +58,17 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label.setPixmap(QPixmap(fname))
         self.label.setScaledContents(True)
 
-        # if self.pushButton.click() == True:
-        #     print('clicando')
-        #     options = QFileDialog.DontUseNativeDialog
-        #     arquivo, _ = QFileDialog.getSaveFileName(self, 'Salvar', 'D:\\Git\\Nova pasta\\URL\\evidencia',
-        #                                              'Imagem (*.jpg);; PNG File (*.png)', options=options)
-        #     self.label.save()
-
-
-
-
-
-
-
     def salvarEvidencia(self, fname):
-        # options = QFileDialog.DontUseNativeDialog
-        # salvar, _ = QFileDialog.getSaveFileName(self, 'Salvar', 'D:\\Git\\Nova pasta\\URL\\evidencia', 'Imagem (*.jpg);; PNG File (*.png)', options=options)
+        banco_db = '3'
+        pixmap = QPixmap(self.label.pixmap())
+        pixmap.save(f"evidencia/{banco_db}.png", "png")
 
-        banco_db = '2'
-        imagem = ImageQt.fromqpixmap(self.label.pixmap())
-        imagem.save(f'Evidencia/{banco_db }.png')
+        # banco_db = '2'
+        # imagem = ImageQt.fromqpixmap(self.label.pixmap())
+        # imagem.save(f'Evidencia/{banco_db }.png')
+
+
         # img, _ = QFileDialog.getSaveFileName(self, "Salvar Arquivo",
-        #                                      filter="PNG(*.png);; JPEG(*.jpg)")
-        # file_filter = 'Images (*.jpg; *.png)'
-        # response = QFileDialog.getSaveFileName(
-        #     parent=self,
-        #     caption='Selecione o local',
-        #     directory='evidencia',
-        #     filter=file_filter,
-        #     initialFilter='Images (*.jpg; *.png)'
-        # # )
-        # # return response[0]
-        # options = QFileDialog.DontUseNativeDialog
-        # imagem, _ = QFileDialog.getSaveFileName(self, 'Salvar', 'D:\\Git\\Nova pasta\\URL\\evidencia', 'Imagem (*.jpg);; PNG File (*.png)', options=options)
-        # imagem = self.label.pixmap()
-        # print(imagem)
-        # imagem.save('test.png')
-
-        # with open(arquivo, 'wt') as f:
-        #     self.label = QPixmap.save(f)
-        # # with open(arquivo, 'w') as fp:
-        # #     fp.writelines(lines)
-
-        # path = os.path.join(self.active_folder, self.ui.lineEditFileName.text())
-        # options = QFileDialog.DontUseNativeDialog
-        # fileName, _ = QFileDialog.getSaveFileName(self, "Save Measurement", path, "(*.jpg)", options=options)
-        # self.active_folder = os.path.dirname(fileName)
-        pass
 
 
 
@@ -118,20 +83,3 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 
 
-
-
-
-
-            # label = QLabel(self)
-        # # imagePath = fname[0]
-        #
-        # pixmap = QPixmap(fname[0])
-        # print(pixmap)
-        # label.setPixmap(pixmap)
-        # # self.label.setPixmap(QPixmap(pixmap))
-        #
-        # self.resize(pixmap.width(), pixmap.height())
-
-        # label = QLabel(self)
-        # pixmap = QPixmap("HEC.jpg")
-        # label.setPixmap(pixmap)

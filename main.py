@@ -3,7 +3,8 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.uic import loadUi
 
-from url import *
+# from url import *
+from inicial import *
 
 
 
